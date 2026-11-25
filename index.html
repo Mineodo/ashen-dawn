@@ -3,26 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ashen Dawn — Launcher</title>
-<meta name="description" content="Launcher du serveur de jeu de rôle Ashen Dawn : connexion Microsoft, installation et mises à jour automatiques. / Launcher for the Ashen Dawn role-playing server.">
-<style>
-  :root { --bg:#14110f; --card:#1d1915; --ink:#ece4d8; --muted:#a79c8c; --accent:#d9893b; --line:#33291f; }
-  @media (prefers-color-scheme: light) { :root { --bg:#f6f1e9; --card:#fffaf2; --ink:#241c14; --muted:#6b5d4b; --accent:#b45f12; --line:#e2d6c2; } }
-  * { box-sizing:border-box }
-  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif }
-  main { max-width:760px; margin:0 auto; padding:48px 16px 72px }
-  header { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:40px }
-  h1 { font-size:2.4rem; margin:0; letter-spacing:.02em }
-  h2 { font-size:1.2rem; margin:0 0 8px; color:var(--accent) }
-  .tag { color:var(--muted); margin:8px 0 0 }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 22px; margin:0 0 16px }
-  .card p, .card ul { margin:0 0 8px } .card ul { padding-left:20px }
-  .lang button { background:none; border:1px solid var(--line); color:var(--ink); padding:6px 12px; border-radius:8px; cursor:pointer; font:inherit }
-  .lang button[aria-pressed="true"] { border-color:var(--accent); color:var(--accent) }
-  a { color:var(--accent) }
-  footer { color:var(--muted); font-size:.85rem; margin-top:32px }
-  [data-l] { display:none } html[lang="fr"] [data-l="fr"], html[lang="en"] [data-l="en"] { display:revert }
-</style>
+<title data-fr="{name} — Launcher" data-en="{name} — Launcher">{name} — Launcher</title>
+<meta name="description" content="Launcher du serveur de jeu de rôle : connexion Microsoft, installation et mises à jour automatiques. / Launcher for the role-playing server.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
@@ -36,62 +19,73 @@
       <button type="button" data-set="en" aria-pressed="false">EN</button>
     </div>
   </header>
+  <nav aria-label="Navigation">
+    <a href="index.html" aria-current="page"><span data-l="fr">Accueil</span><span data-l="en">Home</span></a>
+    <a href="privacy.html"><span data-l="fr">Confidentialité</span><span data-l="en">Privacy</span></a>
+    <a href="terms.html"><span data-l="fr">Conditions d'utilisation</span><span data-l="en">Terms of use</span></a>
+    <a href="mailto:florent.mineo@gmail.com">Contact</a>
+  </nav>
 
   <section class="card">
     <h2 data-l="fr">Qu'est-ce que c'est ?</h2><h2 data-l="en">What is it?</h2>
-    <p data-l="fr">Ce launcher permet de rejoindre notre serveur de jeu de rôle Minecraft Java Edition (Forge 1.20.1) en un clic : il installe Java, Forge et les mods du serveur, les met à jour automatiquement, puis lance le jeu et connecte le joueur au serveur.</p>
-    <p data-l="en">This launcher lets players join our Minecraft Java Edition role-playing server (Forge 1.20.1) in one click: it installs Java, Forge and the server's mods, keeps them up to date, then starts the game and connects the player to the server.</p>
+    <p data-l="fr">Un launcher pour rejoindre en un clic notre serveur de jeu de rôle Minecraft Java Edition (Forge 1.20.1) : il installe Java, Forge et les mods du serveur, les met à jour automatiquement, puis lance le jeu et connecte le joueur au serveur.</p>
+    <p data-l="en">A launcher to join our Minecraft Java Edition role-playing server (Forge 1.20.1) in one click: it installs Java, Forge and the server's mods, keeps them up to date, then starts the game and connects the player to the server.</p>
   </section>
 
   <section class="card">
-    <h2 data-l="fr">Connexion et vie privée</h2><h2 data-l="en">Sign-in and privacy</h2>
+    <h2 data-l="fr">Le serveur</h2><h2 data-l="en">The server</h2>
+    <p data-l="fr">Un serveur d'aventure et de jeu de rôle en équipe (jusqu'à une cinquantaine de joueurs) : combat dynamique, magie, exploration de ruines et de donjons, quêtes et histoire originale. Le launcher n'est destiné qu'à ce serveur et à ses joueurs.</p>
+    <p data-l="en">A cooperative adventure and role-playing server (up to about fifty players): dynamic combat, magic, exploration of ruins and dungeons, quests and an original story. The launcher is only meant for this server and its players.</p>
+  </section>
+
+  <section class="card">
+    <h2 data-l="fr">Comment ça marche</h2><h2 data-l="en">How it works</h2>
+    <ol data-l="fr">
+      <li>Le joueur télécharge et ouvre le launcher.</li>
+      <li>Il se connecte avec son compte Microsoft, sur la page officielle de Microsoft. Il faut posséder Minecraft Java Edition.</li>
+      <li>Il clique sur « Jouer » : le launcher télécharge ce qui manque (Java, Forge, mods), vérifie les fichiers, puis lance le jeu.</li>
+      <li>À chaque mise à jour du serveur, le launcher ne télécharge que les fichiers modifiés.</li>
+    </ol>
+    <ol data-l="en">
+      <li>The player downloads and opens the launcher.</li>
+      <li>They sign in with their Microsoft account, on Microsoft's official page. Owning Minecraft Java Edition is required.</li>
+      <li>They click "Play": the launcher downloads what is missing (Java, Forge, mods), checks the files, then starts the game.</li>
+      <li>When the server is updated, the launcher only downloads the changed files.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2 data-l="fr">Connexion et vie privée, en bref</h2><h2 data-l="en">Sign-in and privacy at a glance</h2>
     <ul data-l="fr">
-      <li>La connexion se fait avec un compte Microsoft, sur la page officielle de connexion de Microsoft. Le launcher ne voit ni ne stocke jamais le mot de passe.</li>
-      <li>Les jetons de connexion restent sur l'ordinateur du joueur. Nous n'en recevons aucune copie.</li>
-      <li>Le launcher ne télécharge que les fichiers du jeu et des mods depuis nos serveurs, et ne collecte aucune donnée personnelle.</li>
-      <li>Le joueur peut se déconnecter à tout moment depuis le launcher, ou désinstaller le programme.</li>
+      <li>Le mot de passe n'est jamais vu ni stocké par le launcher.</li>
+      <li>Les jetons de connexion restent sur l'ordinateur du joueur.</li>
+      <li>Aucune donnée personnelle n'est collectée ni envoyée à nos serveurs.</li>
     </ul>
     <ul data-l="en">
-      <li>Sign-in uses a Microsoft account, on Microsoft's own official sign-in page. The launcher never sees or stores the password.</li>
-      <li>Sign-in tokens stay on the player's computer. We receive no copy of them.</li>
-      <li>The launcher only downloads game and mod files from our servers and collects no personal data.</li>
-      <li>Players can sign out at any time from the launcher, or uninstall the program.</li>
+      <li>The password is never seen or stored by the launcher.</li>
+      <li>Sign-in tokens stay on the player's computer.</li>
+      <li>No personal data is collected or sent to our servers.</li>
     </ul>
+    <p><a href="privacy.html"><span data-l="fr">Lire la politique de confidentialité complète</span><span data-l="en">Read the full privacy policy</span></a></p>
   </section>
 
   <section class="card">
     <h2 data-l="fr">Téléchargement</h2><h2 data-l="en">Download</h2>
-    <p data-l="fr">Windows uniquement pour le moment. Le programme sera proposé ici quand le serveur ouvrira.</p>
+    <p data-l="fr">Windows uniquement pour le moment. Le programme sera proposé ici à l'ouverture du serveur.</p>
     <p data-l="en">Windows only for now. The program will be available here when the server opens.</p>
   </section>
 
   <section class="card">
-    <h2 data-l="fr">Contact</h2><h2 data-l="en">Contact</h2>
-    <p><a href="mailto:florent.mineo@gmail.com">florent.mineo@gmail.com</a></p>
+    <h2>Contact</h2>
+    <p data-l="fr">Une question, un problème, une demande de suppression de données : <a href="mailto:florent.mineo@gmail.com">florent.mineo@gmail.com</a></p>
+    <p data-l="en">A question, a problem, a data deletion request: <a href="mailto:florent.mineo@gmail.com">florent.mineo@gmail.com</a></p>
   </section>
 
   <footer>
-    <p data-l="fr">Ce projet n'est ni approuvé par Mojang Studios ou Microsoft, ni affilié à eux. Minecraft est une marque de Mojang Studios / Microsoft.</p>
-    <p data-l="en">This project is not approved by or affiliated with Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios / Microsoft.</p>
+    <p data-l="fr">Ce projet n'est ni approuvé par Mojang Studios ou Microsoft, ni affilié à eux. Minecraft est une marque de Mojang Studios / Microsoft. Édité à titre individuel par Florent, développeur basé en France. Contact : <a href="mailto:florent.mineo@gmail.com">florent.mineo@gmail.com</a></p>
+    <p data-l="en">This project is not approved by or affiliated with Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios / Microsoft. Published by Florent, an individual developer based in France. Contact: <a href="mailto:florent.mineo@gmail.com">florent.mineo@gmail.com</a></p>
   </footer>
 </main>
-<script>
-(function () {
-  var NAME = "Ashen Dawn";   // nom provisoire : à changer ici seulement (et dans <title>)
-  var els = document.querySelectorAll(".name"); for (var i = 0; i < els.length; i++) els[i].textContent = NAME;
-  document.title = NAME + " — Launcher";
-  function set(l) {
-    document.documentElement.lang = l;
-    var b = document.querySelectorAll("[data-set]");
-    for (var i = 0; i < b.length; i++) b[i].setAttribute("aria-pressed", b[i].getAttribute("data-set") === l ? "true" : "false");
-    try { localStorage.setItem("lang", l); } catch (e) {}
-  }
-  var init = "fr";
-  try { init = localStorage.getItem("lang") || ((navigator.language || "fr").slice(0, 2) === "fr" ? "fr" : "en"); } catch (e) {}
-  set(init === "en" ? "en" : "fr");
-  var b = document.querySelectorAll("[data-set]");
-  for (var j = 0; j < b.length; j++) b[j].addEventListener("click", function () { set(this.getAttribute("data-set")); });
-})();
-</script>
+<script src="app.js"></script>
 </body>
 </html>
